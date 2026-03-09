@@ -4,167 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Femme by Maryam — Hairdresser in Castle Hill, NSW</title>
-    <meta name="description" content="Experience professional hair styling and coloring at La Femme by Maryam. Top-rated hairdresser in Castle Hill, NSW. Book your appointment today.">
+    <meta name="description" content="Expert Hairdresser in Castle Hill. Professional styling, colouring, and hair treatments by Maryam. Book your appointment today.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles.css?v=6c6dcd28">
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css?v=7aa0ddca">
 </head>
 <body>
 
-<nav>
-    <div class="container nav-content">
-        <a href="#" class="logo">LA FEMME BY MARYAM</a>
-        <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#testimonials">Reviews</a>
-            <a href="tel:+61433827853" class="nav-cta">Call Now: 0433 827 853</a>
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">La Femme by Maryam</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#reviews">Reviews</a>
+                <a href="tel:+61433827853" class="nav-cta">Call Now</a>
+            </div>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <div class="hamburger" id="menu-toggle">☰</div>
-    </div>
-    <div class="mobile-nav" id="mobile-menu">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="tel:+61433827853">Call Now</a>
-    </div>
-</nav>
+    </nav>
 
-<section id="hero">
-    <div class="container">
-        <h1>Hairdresser in Castle Hill</h1>
-        <p class="hero-rating">4.3 &#9733; (388 reviews)</p>
-        <a href="tel:+61433827853" class="btn">Book Your Appointment</a>
-    </div>
-</section>
+    <section id="hero">
+        <div class="container hero-content">
+            <h1>Hairdresser in Castle Hill</h1>
+            <p class="hero-rating">4.3 &#9733; (388 reviews)</p>
+            <p class="hero-sub">Experience premium hair transformation and personalized care.</p>
+            <div style="margin-top: 40px;">
+                <a href="tel:+61433827853" class="btn">Book Appointment</a>
+            </div>
+        </div>
+    </section>
 
-<div class="trust-bar">
-    <div class="container trust-flex">
-        <div class="trust-item">
-            <h4>4.3 Stars</h4>
-            <p>Google Rating</p>
-        </div>
-        <div class="trust-item">
-            <h4>388+</h4>
-            <p>Happy Clients</p>
-        </div>
-        <div class="trust-item">
-            <h4>Expert</h4>
-            <p>Maryam's Signature Design</p>
+    <div class="trust-bar">
+        <div class="container trust-flex">
+            <div class="trust-item">
+                <h4>388+</h4>
+                <p>Happy Clients</p>
+            </div>
+            <div class="trust-item">
+                <h4>4.3 Stars</h4>
+                <p>Google Rating</p>
+            </div>
+            <div class="trust-item">
+                <h4>Castle Hill</h4>
+                <p>Premium Studio</p>
+            </div>
         </div>
     </div>
-</div>
 
-<section id="services">
-    <div class="container">
-        <h2 style="text-align: center;">Our Signature Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-img" style="background-image: url('images/service1.png')"></div>
-                <div class="service-content">
-                    <h3>Premium Coloring</h3>
-                    <p>From balayage to full transformations, we use high-quality products to ensure vibrant, lasting color while maintaining hair health.</p>
+    <section id="services">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px;">Our Expert Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/service1.png" alt="Hair Colouring" class="service-img">
+                    <div class="service-info">
+                        <h3>Advanced Colouring</h3>
+                        <p>Specialist balayage, highlights, and full transformations tailored to your natural skin tone.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/service2.png" alt="Styling" class="service-img">
+                    <div class="service-info">
+                        <h3>Precision Cutting</h3>
+                        <p>Modern and classic cuts designed to enhance your features and work with your hair texture.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/service3.png" alt="Treatments" class="service-img">
+                    <div class="service-info">
+                        <h3>Hair Restoration</h3>
+                        <p>Premium treatments to restore silkiness and health to damaged or lifeless hair.</p>
+                    </div>
                 </div>
             </div>
-            <div class="service-card">
-                <div class="service-img" style="background-image: url('images/service2.png')"></div>
-                <div class="service-content">
-                    <h3>Precision Cutting</h3>
-                    <p>Sophisticated styles tailored to your face shape and hair texture by our master stylist, Maryam.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-flex">
+                <div class="about-text">
+                    <h2>Meet Maryam</h2>
+                    <p style="margin-top: 20px;">At La Femme by Maryam, we believe your hair is your crown. Located in the heart of Castle Hill, our boutique studio offers a private, serene space where your hair goals are truly heard.</p>
+                    <p style="margin-top: 15px;">Whether you're looking for a total transformation or a simple maintenance cut, Maryam's dedication to quality and client satisfaction shines through in every session.</p>
+                    <div style="margin-top: 30px;">
+                        <a href="tel:+61433827853" class="btn">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="about-hours">
+                    <h3 style="margin-bottom: 20px;">Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday</span> <span>9 AM – 5:30 PM</span></li>
+                        <li><span>Tuesday</span> <span>9 AM – 5:30 PM</span></li>
+                        <li><span>Wednesday</span> <span>9 AM – 5:30 PM</span></li>
+                        <li><strong>Thursday</strong> <strong>9 AM – 9 PM</strong></li>
+                        <li><span>Friday</span> <span>9 AM – 5:30 PM</span></li>
+                        <li><span>Saturday</span> <span>9 AM – 5 PM</span></li>
+                        <li><span>Sunday</span> <span>9 AM – 5 PM</span></li>
+                    </ul>
                 </div>
             </div>
-            <div class="service-card">
-                <div class="service-img" style="background-image: url('images/service3.png')"></div>
-                <div class="service-content">
-                    <h3>Hair Treatments</h3>
-                    <p>Revitalize damaged hair with our professional silk-infusion treatments and deep conditioning therapies.</p>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <div class="container testimonials">
+            <h2>What Our Clients Say</h2>
+            <p>4.3 &#9733; (388 reviews on Google)</p>
+            <div class="testimonial-grid">
+                <div class="review-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"I loved my experience here Maryam was so good at listening to what I wanted ! Such great results will come back so happy, very clean cute space !!!"</p>
+                    <p style="margin-top: 20px; font-weight: 700;">— Edith Hernandez</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"So happy with my hair. She actually stayed back more than an hour to finish my hair. My hair was already badly damaged and she turned that awful hair into silk while she dyed it red."</p>
+                    <p style="margin-top: 20px; font-weight: 700;">— Nojan Rahnemoun</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="about" style="background-color: var(--white);">
-    <div class="container">
-        <div class="about-flex">
-            <div class="about-text">
-                <h2>Meet Maryam</h2>
-                <p>Welcome to La Femme by Maryam, a boutique hair salon in the heart of Castle Hill. Maryam is dedicated to the art of hairdressing, combining technical skill with a deep understanding of her clients' needs.</p>
-                <p>We pride ourselves on creating a clean, cute, and professional space where you can relax while we transform your look. Whether you're seeking a radical change or a subtle refresh, your hair is in expert hands.</p>
-                <a href="tel:+61433827853" class="btn">Get in Touch</a>
-            </div>
-            <div class="opening-hours">
-                <h3>Opening Hours</h3>
-                <div class="hours-row"><span>Monday</span> <span>9 AM - 5:30 PM</span></div>
-                <div class="hours-row"><span>Tuesday</span> <span>9 AM - 5:30 PM</span></div>
-                <div class="hours-row"><span>Wednesday</span> <span>9 AM - 5:30 PM</span></div>
-                <div class="hours-row"><span>Thursday</span> <span>9 AM - 9 PM</span></div>
-                <div class="hours-row"><span>Friday</span> <span>9 AM - 5:30 PM</span></div>
-                <div class="hours-row"><span>Saturday</span> <span>9 AM - 5 PM</span></div>
-                <div class="hours-row"><span>Sunday</span> <span>9 AM - 5 PM</span></div>
-            </div>
+    <section id="cta-banner">
+        <div class="container cta-content">
+            <h2>Ready for Your New Look?</h2>
+            <p style="font-size: 1.25rem; margin: 20px 0 40px;">Join 388+ satisfied clients in Castle Hill. Rated 4.3 Stars.</p>
+            <a href="tel:+61433827853" class="btn">Call to Book: +61 433 827 853</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="testimonials">
-    <div class="container">
-        <h2 style="text-align: center;">What Our Clients Say</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"I loved my experience here Maryam was so good at listening to what I wanted ! Such great results will come back so happy, very clean cute space !!!"</p>
-                <p><strong>— Edith Hernandez</strong></p>
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">La Femme by Maryam</div>
+                    <p>Professional Hairdresser in Castle Hill, NSW.<br>Experience, care, and quality for your hair.</p>
+                    <p style="margin-top: 20px;"><i class="fas fa-phone"></i> +61 433 827 853</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Castle Hill, NSW 2154</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="#hero">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About Us</a>
+                    <a href="#reviews">Testimonials</a>
+                </div>
+                <div class="footer-map">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3315.524!2d151.0054253!3d-33.730487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>"So happy with my hair. She actually stayed back more than an hour to finish my hair. My hair was already badly damaged and she turned that awful hair into silk while she dyed it red."</p>
-                <p><strong>— Nojan Rahnemoun</strong></p>
+            <div class="copyright">
+                &copy; 2024 La Femme by Maryam. All Rights Reserved. Hairdresser Castle Hill.
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<section id="cta-banner">
-    <div class="container">
-        <h2>Ready for your transformation?</h2>
-        <p style="margin-bottom: 2rem; font-size: 1.2rem;">Join hundreds of happy locals in Castle Hill.</p>
-        <p class="hero-rating">4.3 &#9733; (388 reviews)</p>
-        <a href="tel:+61433827853" class="btn">Call 0433 827 853</a>
-    </div>
-</section>
-
-<div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3319.4939798488344!2d151.0054253!3d-33.730487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-</div>
-
-<footer>
-    <div class="container footer-grid">
-        <div>
-            <h3>La Femme by Maryam</h3>
-            <p>Your premier hairdresser in Castle Hill, NSW.</p>
-            <p>4.3 &#9733; (388 reviews)</p>
-        </div>
-        <div>
-            <h3>Contact</h3>
-            <p>📍 Castle Hill, NSW</p>
-            <p>📞 <a href="tel:+61433827853" style="color: white;">0433 827 853</a></p>
-        </div>
-        <div>
-            <h3>Quick Links</h3>
-            <p><a href="#services" style="color: white; text-decoration: none;">Services</a></p>
-            <p><a href="#about" style="color: white; text-decoration: none;">About</a></p>
-        </div>
-    </div>
-    <div class="container footer-bottom">
-        <p>&copy; 2023 La Femme by Maryam. All Rights Reserved. Hairdresser in Castle Hill, NSW.</p>
-    </div>
-</footer>
-
-<script src="script.js?v=6c6dcd28"></script>
+    <script src="script.js?v=7aa0ddca"></script>
 </body>
 </html>

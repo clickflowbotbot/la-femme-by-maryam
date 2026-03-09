@@ -1,47 +1,73 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.querySelectorAll('.mobile-nav a');
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+        navLinks.style.flexDirection = 'row';
+    } else {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '80px';
+        navLinks.style.left = '0';
+        navLinks.style.width = '100%';
+        navLinks.style.background = '#fff';
+        navLinks.style.padding = '20px';
+        navLinks.style.borderBottom = '1px solid #eee';
+    }
+}
 
-    // Toggle Mobile Menu
-    menuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('active');
-        menuToggle.innerHTML = mobileMenu.classList.contains('active') ? '✕' : '☰';
-    });
+// Window resize handler to reset menu if needed
+window.addEventListener('resize', () => {
+    const navLinks = document.getElementById('navLinks');
+    if (window.innerWidth > 768) {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'row';
+        navLinks.style.position = 'static';
+        navLinks.style.padding = '0';
+        navLinks.style.width = 'auto';
+    } else if (navLinks.style.display === 'flex' && navLinks.style.position !== 'absolute') {
+        navLinks.style.display = 'none';
+    }
+});
 
-    // Close menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            menuToggle.innerHTML = '☰';
-        });
-    });
-
-    // Basic Header Scroll effect
-    window.addEventListener('scroll', function() {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 50) {
-            nav.style.background = '#ffffff';
-            nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-        } else {
-            nav.style.background = 'rgba(255, 255, 255, 0.98)';
-            nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href') !== '#') {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            // Close mobile menu if open
+            if (window.innerWidth <= 768) {
+                document.getElementById('navLinks').style.display = 'none';
+            }
         }
     });
+});
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
-            e.preventDefault();
-            const target = document.querySelector(targetId);
-            if(target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
+// Simple Scroll Reveal Effect
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight * 0.8) {
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+        }
     });
+});
+
+// Initial state for scroll reveal
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'all 0.6s ease-out';
+});
+
+// Trigger immediately for hero
+window.addEventListener('DOMContentLoaded', () => {
+    const hero = document.getElementById('hero');
+    hero.style.opacity = '1';
+    hero.style.transform = 'translateY(0)';
 });
